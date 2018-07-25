@@ -9,7 +9,8 @@ $container['renderer'] = function ($c) {
     $loader = new Twig_Loader_Filesystem($settings['template_path']);
 
     return new Twig_Environment($loader, [
-        'cache' => $settings['cache']
+        // 'cache' => $settings['cache'],
+        'auto_reload' => true,
     ]);
     // return new Slim\Views\PhpRenderer($settings['template_path']);
 };
