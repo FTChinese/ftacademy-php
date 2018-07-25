@@ -6,7 +6,12 @@ $container = $app->getContainer();
 // view renderer
 $container['renderer'] = function ($c) {
     $settings = $c->get('settings')['renderer'];
-    return new Slim\Views\PhpRenderer($settings['template_path']);
+    $loader = new Twig_Loader_Filesystem($settings['template_path']);
+
+    return new Twig_Environment($loader, [
+        'cache' => $settings['cache']
+    ]);
+    // return new Slim\Views\PhpRenderer($settings['template_path']);
 };
 
 // monolog

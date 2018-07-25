@@ -7,11 +7,12 @@ return [
         // Renderer settings
         'renderer' => [
             'template_path' => __DIR__ . '/../templates/',
+            'cache' => __DIR__ . '/../.cache/',
         ],
 
         // Monolog settings
         'logger' => [
-            'name' => 'slim-app',
+            'name' => 'ftacademy',
             'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
