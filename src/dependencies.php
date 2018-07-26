@@ -17,6 +17,8 @@ $container['renderer'] = function ($c) {
 
 // monolog
 $container['logger'] = function ($c) {
+    $environemt = $c['environment'];
+    ChromePhp::log($environemt);
     $settings = $c->get('settings')['logger'];
     $logger = new Monolog\Logger($settings['name']);
     $logger->pushProcessor(new Monolog\Processor\UidProcessor());
