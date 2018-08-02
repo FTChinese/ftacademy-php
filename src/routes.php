@@ -6,13 +6,9 @@ use Slim\Http\Response;
 // Routes
 $app->get('/', function (Request $request, Response $response, array $args) {
 
-    ChromePhp::log($this->environment);
-    ChromePhp::log(getcwd());
-    ChromePhp::log(__FILE__);
-    ChromePhp::log(__DIR__);
-    ChromePhp::log($_ENV);
-    ChromePhp::log(basename(__FILE__));
-    ChromePhp::log(dirname(__FILE__, 2));
+    // ChromePhp::log(getcwd());
+    // ChromePhp::log(__FILE__);
+    // ChromePhp::log(__DIR__);
     // Render index view
     // return $this->renderer->render($response, 'index.phtml', $args);
     $body = $this->renderer->render('index.html');
