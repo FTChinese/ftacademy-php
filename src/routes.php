@@ -12,13 +12,18 @@ $app->get('/', function (Request $request, Response $response, array $args) {
     // Render index view
     // return $this->renderer->render($response, 'index.phtml', $args);
     $body = $this->renderer->render('index.html');
-    $this->logger->info(__DIR__);
     $response->getBody()->write($body);
     return $response;
 });
 
 $app->get('/phpinfo', function (Request $request, Response $response, array $args) {
     $response->getBody()->write(phpinfo());
+    return $response;
+});
+
+$app->get('/subscription', function (Request $request, Response $response, array $args) {
+    $body = $this->renderer->render('/subscription.html');
+    $response->getBody()->write($body);
     return $response;
 });
 

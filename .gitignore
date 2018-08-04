@@ -3,3 +3,6 @@
 !/logs/README.md
 .cache/
 .env
+
+node_modules
+public/dist

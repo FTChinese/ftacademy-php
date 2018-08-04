@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% set iconUrl = "http://interactive.ftchinese.com/favicons" %}
+  <link rel="apple-touch-icon" sizes="180x180" href="{{iconUrl}}/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{iconUrl}}/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{iconUrl}}/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{iconUrl}}/apple-touch-icon-76x76.png">
+  <link href="{{iconUrl}}/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+
+  <title>{% block title %}用户中心{% endblock %} - FT中文网</title>
+  {% if env.isProduction %}
+  <link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>{% include "main.css" %}</style>
+  {% else %}
+  <link rel="stylesheet" href="/dist/bootstrap.css">
+  <link rel="stylesheet" href="/dist/main.css">
+  {% endif %}
+  
+</head>
+<body>
+  <header class="navbar navbar-expand o-header">
+    <div class="container">
+      <a class="navbar-brand" href="/">FT中文网·会员订阅</a>
+      {% block headerNav %}{% endblock %}
+    </div>
+  </header>
+
+  <main class="page-content" role="main">
+    <div class="container">
+      {% if errors.server %}
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <span>{{errors.server.message}}</span>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+      {% endif %}
+
+      {% block main %}{% endblock %}
+    </div>
+  </main>
+
+  <footer class="o-footer">
+    <div class="container">
+        <div>
+            <a href="/m/corp/aboutus.html">关于我们</a>
+            <a href="https://ft.wd3.myworkdayjobs.com/FT_Chinese_External_Careers" target="_blank">加入我们</a>
+            <a href="/m/corp/faq.html">问题回馈</a>
+            <a href="/m/corp/contact.html">联系方式</a>
+            <a href="/m/corp/partner.html">合作伙伴</a>
+            <a href="/m/corp/service.html">服务条款</a>
+            <a href="/m/corp/sales.html">广告业务 </a>
+            <a href="/m/corp/copyright.html">版权声明</a>
+            <a href="/m/marketing/ftc.html">最新动态</a>
+        </div>
+        <p>
+            <span class="copyright"><b>© The Financial Times Ltd {{env.year}}</b></span>
+            <span><acronym title="Financial Times">FT</acronym> and 'Financial Times' are trademarks of The Financial Times Ltd.</span>
+        </p>
+    </div>
+  </footer>
+
+  {% if env.isProduction %}
+  <script src="https://cdn.bootcss.com/bootstrap.native/2.0.21/bootstrap-native-v4.min.js"></script>
+  {% else %}
+  <script src="/dist/bootstrap-native-v4.js"></script>
+  {% endif %}
+</body>
+</html>

@@ -2,7 +2,9 @@
 
 ## Local
 
-php -S localhost:8888 -t public public/index.php
+`php -S localhost:8888 -t public public/index.php`
+
+`npm run build` to put frontend asset in place.
 
 ## Deploy with nginx
 

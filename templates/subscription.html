@@ -1,0 +1,44 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}会员订阅{% endblock %}
+
+{% block main %}
+  <div>
+    <h3>FT中文网会员订阅服务，欢迎您！</h3>
+    <p>希望全球视野的FT中文网，能够带您站在高海拔的地方俯瞰世界，引发您的思考，从不同的角度看到不一样的事物，见他人之未见！</p>
+  </div>
+  
+  <div>
+    <h3>请选择您的订阅方式</h3>
+
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title">标准会员</div>
+          <ul>
+              <li>精选深度分析</li>            
+              <li>中英双语内容</li>
+              <li>金融英语速读训练</li>
+              <li>英语原声电台</li>
+              <li>无限浏览7日前所有历史文章（近8万篇）</li>
+          </ul>
+          <button class="btn btn-primary">立即订阅</button>
+          <p> ¥198.00/年</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-body">
+            <div class="card-title">高端会员</div>
+            <ul>
+              <li>享受“标准会员”所有权益</li>
+              <li>编辑精选，总编/各版块主编每周五为您推荐本周必读资讯，分享他们的思考与观点</li>
+              <li>FT中文网2018年度论坛门票2张，价值3999元/张 （不含差旅与食宿）</li>
+            </ul>
+            <button class="btn btn-primary">立即订阅</button>
+            <p>¥1,998.00/年</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
