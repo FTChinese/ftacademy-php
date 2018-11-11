@@ -1,10 +1,21 @@
-# Run 
+# Run on Local Machine
 
-## Local
+## Install latest PHP
 
-`php -S localhost:8888 -t public public/index.php`
+You can install globally with `brew install php` on Mac. Or install php with [phpbrew](https://github.com/phpbrew/phpbrew).
 
-`npm run build` to put frontend asset in place.
+Then install [composer](https://getcomposer.org/doc/00-intro.md) following the offical instructions.
+
+In the root directory of this project, run `composer install` to install all dependencies.
+
+Run command:
+
+```
+php -S localhost:8888 -t public public/index.php
+```
+
+A server runs on localhost started. Open it in your browser: `http://localhost:8888`
+
 
 ## Deploy with nginx
 
@@ -45,7 +56,7 @@ Then go to `http://localhost:8090`
 
 ## Be careful
 
-`ChromePhp` might send to data casuing `upstream sent too big header while reading response header from upstream` issue. Use it with caution.
+`ChromePhp` might send too much data causing `upstream sent too big header while reading response header from upstream` issue. Use it with caution.
 
 # Slim Framework 3 Skeleton Application
 
