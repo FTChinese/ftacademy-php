@@ -1,5 +1,9 @@
 # Run on Local Machine
 
+## Install frontend assets
+
+`npm install && npm run build`
+
 ## Install latest PHP
 
 You can install globally with `brew install php` on Mac. Or install php with [phpbrew](https://github.com/phpbrew/phpbrew).
