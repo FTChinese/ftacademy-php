@@ -17,6 +17,11 @@ php -S localhost:8888 -t public public/index.php
 A server runs on localhost started. Open it in your browser: `http://localhost:8888`
 
 
+## Documents you need to read
+
+* [Slim](https://www.slimframework.com/) The micro-framework we used. Or you can simply read the source in the `vendor` directory. It's very short.
+* [Twig](https://twig.symfony.com/) The template engine we used in this project.
+
 ## Deploy with nginx
 
 ```
