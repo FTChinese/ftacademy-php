@@ -8,7 +8,7 @@
 
 You can install globally with `brew install php` on Mac. Or install php with [phpbrew](https://github.com/phpbrew/phpbrew).
 
-Then install [composer](https://getcomposer.org/doc/00-intro.md) following the offical instructions.
+Then install [composer](https://getcomposer.org/doc/00-intro.md) following the offical instructions. Or simply use `brew install composer` if you are on Mac.
 
 In the root directory of this project, run `composer install` to install all dependencies.
 
